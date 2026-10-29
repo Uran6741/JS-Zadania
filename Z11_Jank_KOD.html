@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Obliczanie sekund KOD</title>
+    </head>
+    <body>
+        <textarea rows="34" cols="85" type="text" readonly> 
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Obliczanie sekund</title>
+  </head>
+  <body>
+    <div style="color: green; font-size: 50px;">
+      <script language="JavaScript">
+        var D1_jan = prompt("Data1=", "");
+        var D2_jan = prompt("Data2=", "");
+        var sekund;
+        var a = parseFloat(D1_tar);
+        var b = parseFloat(D2_tar);
+        sekund = (a - b) * 24 * 60 * 60;
+
+
+        document.write(
+          "Ilość sekund między dniami " + a + " i " + b + " = " + sekund + "<br>"
+        );
+
+        function okno_zamknij_Jankowski() {
+          window.close();
+        }
+      </script>
+    </div>
+
+<input type="button" value="zamknij okno" onclick="okno_zamknij_Jankowski()"/> 
+  </body>
+</html>
+        </textarea>
+    </body>
+</html>
