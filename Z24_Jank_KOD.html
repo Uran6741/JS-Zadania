@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <title>KOD</title>
+    </head>
+    <body>
+        <script>
+            function okno_zamknij_Jankowski(){
+            window.close()
+            }
+        </script>
+        <textarea rows="36" cols="100" type="text" readonly> 
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 24</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: rgb(150, 150, 150);
+            color: rgb(0, 0, 255);
+        }
+    </style>
+</head>
+<body onload="oblicz24()">
+    <script>
+        function oblicz24() {
+            var x1 = parseFloat(prompt("Wpisz x1=", ""));
+            var x2 = parseFloat(prompt("Wpisz x2=", ""));
+
+            var liczbaLiterImienia = 5;
+            var y1 = 3 * x1 * liczbaLiterImienia /
+                (liczbaLiterImienia + 2);
+
+            var rad = x1 * Math.PI / 180;
+            var y2 = 2 * Math.cos(rad) + 3 * Math.sin(rad);
+
+            var y3 = Math.cbrt(
+                Math.pow(x1, 5) +
+                2 * Math.pow(x2, 4) * Math.abs(x1 - x2)
+            );
+
+            document.getElementById("wynik").innerHTML =
+                "x1 = " + x1 + "<br>" +
+                "x2 = " + x2 + "<br>" +
+                "y1 = " + y1.toFixed(2) + "<br>" +
+                "y2 = " + y2.toFixed(2) + "<br>" +
+                "y3 = " + y3.toFixed(2);
+        }
+    </script>
+
+    <div id="wynik"></div>
+</body>
+</html>
+        </textarea>
+        <input type="button" value="zamknij okno" onclick="okno_zamknij_Jankowski()" />
+    </body>
+</html>

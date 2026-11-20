@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 23</title>
+    <script language="JavaScript">
+        function d_tar(d, x) {
+            var dLicza = parseFloat(d);
+            var xLicza = parseFloat(x);
+
+            var drabina = Math.sqrt(dLicza * dLicza + xLicza * xLicza);
+            document.getElementsByName("drabina")[0].value = drabina.toFixed(2);
+            alert("Drabina=" + drabina.toFixed(2));
+        }
+
+        function x_tar(d, x) {
+            var dLicza = parseFloat(d);
+            var xLicza = parseFloat(x);
+
+            var alfa = Math.atan(dLicza / xLicza) * 180 / Math.PI;
+            document.getElementsByName("alfa")[0].value = alfa.toFixed(2);
+            alert("Alfa=" + alfa.toFixed(2) + " stopni");
+        }
+    </script>
+</head>
+
+<body>
+    Pobliczanie odległości od drabiny i kąta
+    <br> <br>
+    <form name="formularz" action="..." onsubmit="d_tar(this.d.value,this.x.value); 
+x_tar(this.d.value,this.x.value);return false">
+        Podaj d=
+        <input size="6" name="d">
+        Podaj x=
+        <input size="6" name="x">
+        <br> <br>
+        <input TYPE="submit" Value="oblicz">
+        <br> <br>
+        Drabina=
+        <input size="6" name="drabina" type="text" readonly>
+        Alfa=
+        <input size="6" name="alfa" type="text" readonly>
+    </form>
+</body>
+</html>
